@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4F8"
+    tools:context=".view.AddRecurringPaymentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_add_recurring"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#00695C"
+            app:title="Novo Pagamento Fixo"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_payment_nome"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome (Ex: Netflix, Spotify)"
+
+            android:textColorHint="@android:color/darker_gray"
+
+            app:boxStrokeColor="#00897B"
+            app:hintTextColor="#00897B">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_payment_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_payment_categoria"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Categoria (Ex: Lazer, Saúde)"
+
+            android:textColorHint="@android:color/darker_gray"
+
+            app:boxStrokeColor="#00897B"
+            app:hintTextColor="#00897B">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_payment_categoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_payment_valor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Valor (Ex: 29,99)"
+
+            android:textColorHint="@android:color/darker_gray"
+
+            app:boxStrokeColor="#00897B"
+            app:hintTextColor="#00897B">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_payment_valor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_payment_dia"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Dia do Vencimento (Ex: 1, 15, 30)"
+
+            android:textColorHint="@android:color/darker_gray"
+
+            app:boxStrokeColor="#00897B"
+            app:hintTextColor="#00897B">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_payment_dia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_save_recurring_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Salvar Pagamento"
+            android:padding="12dp"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#00897B"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -40,10 +40,10 @@ public class PagamentoRecorrenteAdapter extends RecyclerView.Adapter<PagamentoRe
             holder.pagamentoName.setText(current.getNome());
             holder.pagamentoCategory.setText(current.getCategoria() + " | Recorrente");
 
-            // Formata o valor para exibir como negativo
+            
             holder.pagamentoAmount.setText("-" + currencyFormat.format(current.getValor()));
 
-            // Formata a data de vencimento
+           
             holder.pagamentoDueDate.setText("Vence dia " + current.getDiaVencimento());
         }
     }

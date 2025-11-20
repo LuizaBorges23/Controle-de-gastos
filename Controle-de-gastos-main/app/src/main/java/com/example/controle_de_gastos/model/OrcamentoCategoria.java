@@ -12,13 +12,13 @@ public class OrcamentoCategoria {
     private String nome;
     private double valorGuardado;
 
-    // Construtor
+    
     public OrcamentoCategoria(String nome, double valorGuardado) {
         this.nome = nome;
         this.valorGuardado = valorGuardado;
     }
 
-    // Getters e Setters
+
     public int getId() {
         return id;
     }

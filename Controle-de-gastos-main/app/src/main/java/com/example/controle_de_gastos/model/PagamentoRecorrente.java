@@ -12,9 +12,9 @@ public class PagamentoRecorrente {
     private String nome;
     private String categoria;
     private double valor;
-    private int diaVencimento; // Ex: 1, 15, 30
+    private int diaVencimento; 
 
-    // Construtor
+    
     public PagamentoRecorrente(String nome, String categoria, double valor, int diaVencimento) {
         this.nome = nome;
         this.categoria = categoria;
@@ -22,7 +22,7 @@ public class PagamentoRecorrente {
         this.diaVencimento = diaVencimento;
     }
 
-    // Getters e Setters
+    
     public int getId() {
         return id;
     }

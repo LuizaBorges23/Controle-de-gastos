@@ -1,15 +1,15 @@
 package com.example.controle_de_gastos.adapter;
 
 import android.content.Context;
-import android.graphics.Color; // <-- NOVO IMPORT
+import android.graphics.Color; 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView; // <-- NOVO IMPORT
+import android.widget.ImageView; 
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-// import androidx.core.content.ContextCompat; // (Vamos usar Color.parseColor)
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.controle_de_gastos.R;
@@ -27,7 +27,7 @@ public class TransacaoAdapter extends RecyclerView.Adapter<TransacaoAdapter.Tran
     private List<Transacao> mTransacoes;
     private final Context mContext;
 
-    // Formatadores
+   
     private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd 'de' MMM 'de' yyyy", new Locale("pt", "BR"));
 
@@ -50,23 +50,23 @@ public class TransacaoAdapter extends RecyclerView.Adapter<TransacaoAdapter.Tran
 
             holder.categoria.setText(current.getCategoria());
 
-            // Formatar data
+            
             holder.data.setText(dateFormat.format(new Date(current.getData())));
 
-            // Formatar Valor e Lógica de Ícone
+            
             double valor = current.getValor();
 
             if ("Receita".equals(current.getTipo())) {
                 holder.valor.setText(currencyFormat.format(valor));
-                holder.valor.setTextColor(Color.parseColor("#4CAF50")); // Cor verde
+                holder.valor.setTextColor(Color.parseColor("#4CAF50")); 
 
-                // NOVO: Setar ícone de Receita
+                
                 holder.iconType.setImageResource(R.drawable.ic_trending_up);
-            } else { // Despesa
+            } else { 
                 holder.valor.setText("-" + currencyFormat.format(valor));
-                holder.valor.setTextColor(Color.parseColor("#F44336")); // Cor vermelha
+                holder.valor.setTextColor(Color.parseColor("#F44336")); 
 
-                // NOVO: Setar ícone de Despesa
+                
                 holder.iconType.setImageResource(R.drawable.ic_trending_down);
             }
         }

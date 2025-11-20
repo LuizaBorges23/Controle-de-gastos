@@ -16,7 +16,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class AddTransactionActivity extends AppCompatActivity{
-    // A constante para o "Extra" (ótima prática!)
+    
     public static final String EXTRA_TIPO = "com.example.contrledegastos.EXTRA_TIPO";
 
     private TextInputEditText mEditTextValor;
@@ -32,10 +32,9 @@ public class AddTransactionActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // --- CORREÇÃO AQUI ---
-        // Carregue o layout de "adicionar transação", não o "activity_main"
+        
         setContentView(R.layout.transaction);
-        // --- FIM DA CORREÇÃO ---
+        
 
         mEditTextValor = findViewById(R.id.edit_text_valor);
         mEditTextCategoria = findViewById(R.id.edit_text_categoria);
@@ -46,12 +45,11 @@ public class AddTransactionActivity extends AppCompatActivity{
 
         mTransactionViewModel = new ViewModelProvider(this).get(TransactionViewmodel.class);
 
-        // Configura o botão de voltar da Toolbar
+        
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationOnClickListener(v -> finish());
 
-        // Verifica se a activity foi aberta com um tipo pré-selecionado
-        // (Isso está perfeito para quando você adicionar os botões "Receita/Despesa" na MainActivity)
+        
         if (getIntent().hasExtra(EXTRA_TIPO)) {
             String tipo = getIntent().getStringExtra(EXTRA_TIPO);
             if ("Receita".equals(tipo)) {
@@ -64,8 +62,8 @@ public class AddTransactionActivity extends AppCompatActivity{
         mButtonSave.setOnClickListener(v -> saveTransaction());
     }
 
-    private void saveTransaction() {
-        // Seu código saveTransaction() está ótimo, sem necessidade de mudanças.
+    private void savarTransicao() {
+        
         String valorStr = mEditTextValor.getText().toString().trim();
         String categoria = mEditTextCategoria.getText().toString().trim();
         int selectedTipoId = mRadioGroupTipo.getCheckedRadioButtonId();
@@ -77,7 +75,7 @@ public class AddTransactionActivity extends AppCompatActivity{
 
         double valor;
         try {
-            // Remove "R$" e vírgulas, se houver, e troca vírgula por ponto
+            
             valorStr = valorStr.replace("R$", "").replace(".", "").replace(",", ".").trim();
             valor = Double.parseDouble(valorStr);
         } catch (NumberFormatException e) {
@@ -86,12 +84,12 @@ public class AddTransactionActivity extends AppCompatActivity{
         }
 
         String tipo = (selectedTipoId == R.id.radio_receita) ? "Receita" : "Despesa";
-        long data = System.currentTimeMillis(); // Data atual
+        long data = System.currentTimeMillis(); 
 
         Transaction transaction = new Transaction(valor, tipo, categoria, data);
         mTransactionViewModel.insert(transaction);
 
         Toast.makeText(this, "Transação salva!", Toast.LENGTH_SHORT).show();
-        finish(); // Fecha a activity e volta para a MainActivity
+        finish(); 
     }
 }

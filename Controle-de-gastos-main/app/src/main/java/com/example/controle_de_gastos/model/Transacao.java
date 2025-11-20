@@ -12,11 +12,11 @@ public class Transacao implements Serializable {
     private int id;
 
     private double valor;
-    private String tipo; // "Receita" ou "Despesa"
+    private String tipo; 
     private String categoria;
-    private long data; // Salvar como timestamp para facilitar a ordenação
+    private long data; 
 
-    // Construtor, getters e setters
+    
 
     public Transacao(double valor, String tipo, String categoria, long data) {
         this.valor = valor;

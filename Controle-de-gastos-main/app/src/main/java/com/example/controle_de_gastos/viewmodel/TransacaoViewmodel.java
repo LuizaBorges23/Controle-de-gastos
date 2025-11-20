@@ -16,16 +16,16 @@ public class TransacaoViewmodel extends AndroidViewModel {
     private TransacaoRepositorio mRepositorio;
     private final LiveData<List<Transacao>> mAllTransacoes;
     private final LiveData<Double> mTotalBalance;
-    private final LiveData<Double> mTotalIncome;    // --- NOVO ---
-    private final LiveData<Double> mTotalExpenses;  // --- NOVO ---
+    private final LiveData<Double> mTotalIncome;    
+    private final LiveData<Double> mTotalExpenses;  
 
     public TransacaoViewmodel(@NonNull Application application) {
         super(application);
         mRepositorio = new TransacaoRepositorio(application);
         mAllTransacoes = mRepositorio.getAllTransacoes();
         mTotalBalance = mRepositorio.getTotalBalance();
-        mTotalIncome = mRepositorio.getTotalIncome();      // --- NOVO ---
-        mTotalExpenses = mRepositorio.getTotalExpenses();  // --- NOVO ---
+        mTotalIncome = mRepositorio.getTotalIncome(); 
+        mTotalExpenses = mRepositorio.getTotalExpenses();
     }
 
     public LiveData<List<Transacao>> getAllTransacoes() {
@@ -36,12 +36,12 @@ public class TransacaoViewmodel extends AndroidViewModel {
         return mTotalBalance;
     }
 
-    // --- NOVO ---
+    
     public LiveData<Double> getTotalIncome() {
         return mTotalIncome;
     }
 
-    // --- NOVO ---
+    
     public LiveData<Double> getTotalExpenses() {
         return mTotalExpenses;
     }

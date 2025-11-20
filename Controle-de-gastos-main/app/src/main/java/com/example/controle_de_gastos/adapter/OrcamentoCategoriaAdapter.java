@@ -19,7 +19,7 @@ import java.util.Locale;
 public class OrcamentoCategoriaAdapter extends RecyclerView.Adapter<OrcamentoCategoriaAdapter.OrcamentoViewHolder> {
 
     private final LayoutInflater mInflater;
-    private List<OrcamentoCategoria> mOrcamentoCategorias; // Lista em cache
+    private List<OrcamentoCategoria> mOrcamentoCategorias; 
     private final NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
     public OrcamentoCategoriaAdapter(Context context) {

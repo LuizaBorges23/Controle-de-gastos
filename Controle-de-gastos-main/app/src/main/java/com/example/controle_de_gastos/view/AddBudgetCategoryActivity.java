@@ -27,19 +27,19 @@ public class AddBudgetCategoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_budget_category);
 
-        // Encontrar os componentes
+       
         editTextNome = findViewById(R.id.edit_text_budget_nome);
         editTextValor = findViewById(R.id.edit_text_budget_valor);
         buttonSave = findViewById(R.id.button_save_budget_category);
         toolbar = findViewById(R.id.toolbar_add_budget);
 
-        // Configurar o ViewModel (O ViewModel dos Cofrinhos)
+       
         viewModel = new ViewModelProvider(this).get(BudgetViewModel.class);
 
-        // Configurar o botão de voltar da Toolbar
+        
         toolbar.setNavigationOnClickListener(v -> finish());
 
-        // Configurar o clique do botão Salvar
+        
         buttonSave.setOnClickListener(v -> saveCategory());
     }
 
@@ -47,7 +47,7 @@ public class AddBudgetCategoryActivity extends AppCompatActivity {
         String nome = editTextNome.getText().toString().trim();
         String valorStr = editTextValor.getText().toString().trim();
 
-        // Validação
+        
         if (nome.isEmpty()) {
             Toast.makeText(this, "Por favor, insira um nome", Toast.LENGTH_SHORT).show();
             return;
@@ -63,11 +63,11 @@ public class AddBudgetCategoryActivity extends AppCompatActivity {
             }
         }
 
-        // Criar e salvar o objeto
+        
         BudgetCategory category = new BudgetCategory(nome, valor);
         viewModel.insert(category);
 
         Toast.makeText(this, "Categoria salva!", Toast.LENGTH_SHORT).show();
-        finish(); // Fecha a tela e volta para a MainActivity
+        finish(); 
     }
 }

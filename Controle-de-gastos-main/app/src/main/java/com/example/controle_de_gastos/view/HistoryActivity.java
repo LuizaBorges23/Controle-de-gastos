@@ -22,21 +22,20 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        // Configurar a Toolbar e o botão de voltar
+        
         MaterialToolbar toolbar = findViewById(R.id.toolbar_history);
         toolbar.setNavigationOnClickListener(v -> finish());
 
-        // Configurar o RecyclerView
+        
         RecyclerView recyclerView = findViewById(R.id.recycler_view_history);
         transacaoAdapter = new TransacaoAdapter(this);
         recyclerView.setAdapter(transacaoAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Configurar o ViewModel
+        
         transacaoViewModel = new ViewModelProvider(this).get(TransacaoViewmodel.class);
 
-        // Observar a lista de transações
-        // (O mesmo ViewModel que a MainActivity usa para o saldo)
+        
         transacaoViewModel.getAllTransacoes().observe(this, transacoes -> {
             transacaoAdapter.setTransacoes(transacoes);
         });

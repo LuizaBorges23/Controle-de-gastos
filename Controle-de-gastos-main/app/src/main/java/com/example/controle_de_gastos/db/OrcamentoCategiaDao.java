@@ -18,8 +18,7 @@ public interface OrcamentoCategiaDao {
     @Query("SELECT * FROM orcamento_categorias ORDER BY nome ASC")
     LiveData<List<OrcamentoCategia>> getAllOrcamentoCategorias();
 
-    // --- NOVO MÉTODO ADICIONADO ---
-    // Procura uma categoria pelo nome e subtrai um valor do "valorGuardado"
+
     @Query("UPDATE orcamento_categorias SET valorGuardado = valorGuardado - :valorDespesa WHERE nome = :nomeCategoria")
     void updateOrcamentoOnDespesa(String nomeCategoria, double valorDespesa);
 }

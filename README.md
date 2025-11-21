@@ -32,18 +32,6 @@ O projeto foi desenvolvido no **Android Studio**, aplicando conceitos fundamenta
 
 ---
 
-## 📸 Screenshots
-
-| Tela Inicial | Cadastro de Gasto |
-|:---:|:---:|
-| ![Home](https://web.whatsapp.com/07cd3301-98d7-41bc-aeb6-8fcac64b237f) | ![Cadastro](https://web.whatsapp.com/2cb4fef1-11b0-41a2-97f9-7e32059b14f9) |
-
-
-
----
-
-
-
 ## ✒️ Autores
 
 **Maria Luiza Borges**

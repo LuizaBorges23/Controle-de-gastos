@@ -36,9 +36,9 @@ O projeto foi desenvolvido no **Android Studio**, aplicando conceitos fundamenta
 
 | Tela Inicial | Cadastro de Gasto |
 |:---:|:---:|
-| ![Home](https://via.placeholder.com/200x400?text=Print+Home) | ![Cadastro](https://via.placeholder.com/200x400?text=Print+Cadastro) |
+| ![Home](https://web.whatsapp.com/07cd3301-98d7-41bc-aeb6-8fcac64b237f) | ![Cadastro](https://web.whatsapp.com/2cb4fef1-11b0-41a2-97f9-7e32059b14f9) |
 
-*(Substitua os links acima pelos prints reais do seu aplicativo)*
+
 
 ---
 

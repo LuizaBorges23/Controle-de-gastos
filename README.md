@@ -34,8 +34,8 @@ O projeto foi desenvolvido no **Android Studio**, aplicando conceitos fundamenta
 
 ## ✒️ Autores
 
-**Maria Luiza Borges**
-**Thais Ribeiro Menezes**
+**Maria Luiza Borges**/
+**Thais Ribeiro Menezes**/
 **Anderson Jose**
 
 ---
